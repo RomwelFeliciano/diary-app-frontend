@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
 
 import Navbar from "./components/Navbar";
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="App min-h-screen">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <main className="relative flex h-full min-h-screen w-full flex-col items-center justify-start px-4 py-32 md:px-20">
           <Routes>
@@ -29,7 +29,7 @@ const App = () => {
             />
           </Routes>
         </main>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
